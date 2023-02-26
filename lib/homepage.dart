@@ -7,7 +7,7 @@ void main(){
   name.add("hi there");
   name.add(15);
   name.add(25);
-  name.a dd(75);
+  name.add(75);
 
   name.addAll(listNames);
   

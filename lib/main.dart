@@ -13,18 +13,30 @@ void main() {
         backgroundColor: Colors.amber,
         ),
 
-        body: ListView.separated(itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(names[index], style: TextStyle(color: Colors.black, fontSize: 18, ),),
-          );
-        },
-        itemCount: names.length,
-        // itemExtent: 300,
-        separatorBuilder: (context, index) {
-          return Divider(height: 50, thickness: 2,);
-        },
-        )
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: Colors.blue.shade200,
+          child: Center(
+            child: Container(
+              height: 200,
+              width: 200,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+              color: Colors.blueGrey,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(22)),
+              border: Border.all(width: 2, color: Colors.red),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 2,
+                  color: Colors.black,
+                )
+              ]
+              ),
+
+            ),
+          ),
+        ),
         
           
       ),
