@@ -11,52 +11,24 @@ void main() {
         backgroundColor: Colors.amber,
         ),
 
-        body: SingleChildScrollView(
-          child: Column(
+        body: ListView(
           children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
-                ),
-                 Container(
-                  height: 200,
-                  width: 200,
-                  color: Color.fromARGB(255, 11, 159, 26),
-                ),
-                 Container(
-                  height: 200,
-                  width: 200,
-                  color: Color.fromARGB(255, 70, 54, 244),
-                ),
-                ]
-              ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(color: Colors.black, fontSize: 18),),
             ),
-            Container(
-              height: 200,
-              color: Colors.amber,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Two", style: TextStyle(color: Colors.black, fontSize: 18),),
             ),
-            Container(
-              height: 200,
-              color: Colors.blueAccent,
-            ),
-            Container(
-              height: 200,
-              color: Colors.black12,
-            ),
-            Container(
-              height: 200,
-              color: Colors.deepPurpleAccent,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Three", style: TextStyle(color: Colors.black, fontSize: 18),),
             ),
           ],
-           ),
-        ),
+        )
         
-            
+          
       ),
    ),
  );
