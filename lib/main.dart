@@ -6,35 +6,55 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-        title:const Text('First Flutter'),
+        title:Center
+        (child: const Text('First Flutter', style: TextStyle(color: Colors.black),)),
+        backgroundColor: Colors.amber,
         ),
 
-        body: Container(
-          width: 200,
+        body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-            InkWell(
-              child: Text('Hi 1', style: TextStyle(fontSize: 24,),),
-              onTap: (){
-                print('tapped');
-              },
-              onDoubleTap: (){
-                print('double tapped');
-              },
-              onLongPress: (){
-                print('Long pressed');
-              },
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.red,
+                ),
+                 Container(
+                  height: 200,
+                  width: 200,
+                  color: Color.fromARGB(255, 11, 159, 26),
+                ),
+                 Container(
+                  height: 200,
+                  width: 200,
+                  color: Color.fromARGB(255, 70, 54, 244),
+                ),
+                ]
               ),
-            Text('Hi 2', style: TextStyle(fontSize: 24,),),
-            Text('Hi 3', style: TextStyle(fontSize: 24,),),
-            ElevatedButton(onPressed: (){
-              print("Clicked");
-            }, child: Text('Clicked'),),
+            ),
+            Container(
+              height: 200,
+              color: Colors.amber,
+            ),
+            Container(
+              height: 200,
+              color: Colors.blueAccent,
+            ),
+            Container(
+              height: 200,
+              color: Colors.black12,
+            ),
+            Container(
+              height: 200,
+              color: Colors.deepPurpleAccent,
+            ),
           ],
-          ),
-        )
+           ),
+        ),
         
             
       ),
